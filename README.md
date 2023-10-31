@@ -17,10 +17,10 @@
 Clone o repósitorio do GitHub:
 ```bash
 cd "diretório para o projeto"
-git clone https://github.com/PepeuFBV/Editorial_POOBD
+git clone https://github.com/Samuelrcf/Editora.git
 ```
 
-Baixe o <a src="https://code.visualstudio.com/download"> VSCode </a> ou o <a src="https://www.eclipse.org/downloads/packages/installer"> Eclipse </a> na versão mais recente para o seu sistema operacional.
+Baixe o <a href="https://code.visualstudio.com/download">VSCode</a> ou o <a href="https://www.eclipse.org/downloads/packages/installer">Eclipse</a> na versão mais recente para o seu sistema operacional.
 
 Baixe o <a src="https://www.devmedia.com.br/instalacao-e-configuracao-do-pacote-java-jdk/23749"> JDK </a> 17 ou superior.
 
