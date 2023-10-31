@@ -20,7 +20,7 @@ cd "diretório para o projeto"
 git clone https://github.com/PepeuFBV/Editorial_POOBD
 ```
 
-Baixe o <a src="https://code.visualstudio.com/download"> VSCode </a> na versão mais recente para o seu sistema operacional.
+Baixe o <a src="https://code.visualstudio.com/download"> VSCode </a> ou o <a src="https://www.eclipse.org/downloads/packages/installer"> Eclipse </a> na versão mais recente para o seu sistema operacional.
 
 Baixe o <a src="https://www.devmedia.com.br/instalacao-e-configuracao-do-pacote-java-jdk/23749"> JDK </a> 17 ou superior.
 
@@ -38,7 +38,7 @@ Baixe e conecte o <a src="https://jdbc.postgresql.org/"> driver </a> do PostgreS
 #### Para ver as telas
 Baixe e conecte a <a src="https://gluonhq.com/products/javafx/"> bilioteca </a> do JavaFX no seu projeto no VSCode.
 
-#### Extra
+#### Para redefinir senha no programa a partir do seu gmail
 Baixe e conecte as bibliotecas 'javax.mail-1.6.2.jar' e 'activation.jar'.
 
 ### Iniciando
@@ -59,7 +59,7 @@ CREATE TABLE gerentes (
 	nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    id_usuario INT UNIQUE REFERENCES usuarios (id_usuario) ON DELETE CASCADE
+    id_usuario INT UNIQUE 
 );
 
 CREATE TABLE autores (
@@ -69,7 +69,7 @@ CREATE TABLE autores (
     endereco VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    id_usuario INT UNIQUE REFERENCES usuarios (id_usuario) ON DELETE CASCADE
+    id_usuario INT UNIQUE 
 );
 
 CREATE TABLE avaliadores (
@@ -79,24 +79,24 @@ CREATE TABLE avaliadores (
     endereco VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    id_usuario INT UNIQUE REFERENCES usuarios (id_usuario) ON DELETE CASCADE
+    id_usuario INT UNIQUE
 );
 
 CREATE TABLE obras (
     id_obra SERIAL PRIMARY KEY,
-    titulo VARCHAR(255) NOT NULL,
+    titulo VARCHAR(255) UNIQUE NOT NULL,
     genero VARCHAR(255) NOT NULL,
     ano DATE NOT NULL,
     status VARCHAR(255),
     data_avaliacao DATE,
-    id_autor INT REFERENCES autores (id_autor) ON DELETE CASCADE,
-    id_avaliador INT REFERENCES avaliadores (id_avaliador),
+    id_autor INT,
+    id_avaliador INT,
     pdf_obra BYTEA NOT NULL,
     pdf_avaliacao BYTEA
 );
 
-INSERT INTO TABLE usuarios (nome, email, senha, tipo) VALUES ("Paulão", "seuemail@gmail.com", "suasenha", Gerente);
-INSERT INTO TABLE gerentes (nome, email, senha, id_usuario) VALUES ("Paulão", "seuemail@gmail.com", "suasenha", 1);
+INSERT INTO TABLE usuarios (nome, email, senha, tipo) VALUES ("Paulão", "seuemail@gmail.com", "Suasenha&123", Gerente);
+INSERT INTO TABLE gerentes (nome, email, senha, id_usuario) VALUES ("Paulão", "seuemail@gmail.com", "Suasenha&123", 1);
 `````
 
 Isso inicializará as tabelas e criará o usuário gerente com o seu email para o seu uso (mude os últimos dois comandos para seu email e senha desejada).
