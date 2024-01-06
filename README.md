@@ -1,4 +1,4 @@
-# Editorial do Paulão
+# Editora do Paulão
 
 ## Descrição do projeto
 É um software para o gerenciamento de uma editora. O software é capaz de cadastrar dois tipos de usuários (autores e avaliadores), cadastrar obras, definir os autores e avaliadores das obras no sistema. Ele também é capaz de separar os dados mostrados a cada tipo de usuário, permite os usuários avaliadores avaliarem obras, assim como os usuários autores cadastrarem obras.
@@ -42,7 +42,7 @@ Baixe e conecte a <a src="https://gluonhq.com/products/javafx/"> bilioteca </a> 
 Baixe e conecte as bibliotecas 'javax.mail-1.6.2.jar' e 'activation.jar'.
 
 ### Iniciando
-Para iniciar o programa pela primeira vez rode o comando a seguir no seu banco de dados: 
+Para iniciar o programa pela primeira vez rode o comando a seguir no seu banco de dados PostgreSQL: 
 `````bash
 CREATE TABLE usuarios (
     id_usuario SERIAL PRIMARY KEY,
